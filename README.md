@@ -12,7 +12,7 @@
 
 .Net Core 3.1
 
-**Versión Visual Studio:**
+**Versión Visual Studio: **
 
 Microsoft Visual Studio Community 2019
 Version 16.11.12
@@ -22,7 +22,7 @@ Version 16.11.12
 Base de datos no relacional, basada en colecciones y documentos.
 Firebase - Módulo:  Realtime DataBase
 
-**Repositorio GitHub:**
+**Repositorio GitHub: **
 
 https://github.com/Dianis86/API-MUTANTES
 
@@ -59,3 +59,7 @@ En esta API se tienen los siguientes servicios:
 
 -  **/mutant **   sirve para validar si la secuencia de ADN es Mutante ó Humano
 -  ** /stats**  devuelve un Json con las estadísticas de las verificaciones de ADN
+
+#### Base de datos Firebase, basada en colecciones y documentos
+
+![](/Imagenes/Firebase.png)
