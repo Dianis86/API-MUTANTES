@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ReclutandoMutantes.Controllers
 {
-    [Route("api/")]
     [ApiController]
     [Produces("application/json")]
     public class ADNController : Controller

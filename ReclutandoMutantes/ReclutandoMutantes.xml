@@ -7,7 +7,7 @@
         <member name="M:ReclutandoMutantes.Controllers.ADNController.Mutante(ReclutandoMutantes.Models.ADN)">
              <summary>
              Verifica que la secuencia de ADN sea váldida,
-             verifica si la secuencia ingresada es mutante o humano,
+             si la secuencia ingresada es mutante o humano, y
              guarda en la BD los registros de las secuencias
              </summary>
              <param name="dna"></param>
