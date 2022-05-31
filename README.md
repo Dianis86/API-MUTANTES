@@ -60,6 +60,6 @@ En esta API se tienen los siguientes servicios:
 -  **/mutant **   sirve para validar si la secuencia de ADN es Mutante ó Humano
 -  ** /stats**  devuelve un Json con las estadísticas de las verificaciones de ADN
 
-#### Base de datos Firebase, basada en colecciones y documentos
+# Base de datos Firebase, basada en colecciones y documentos
 
 ![](/Imagenes/Firebase.png)
