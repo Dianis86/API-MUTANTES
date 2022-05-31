@@ -1,6 +1,6 @@
 # API Mutantes
 
-                                                                      ![](/Imagenes/apix128.png)
+![](/Imagenes/apix128.png)
 
 **NuGet Package Utilizados: **
 
