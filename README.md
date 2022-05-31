@@ -35,11 +35,15 @@ Cada cadena de string representa una fila de una tabla de NxN.
 En base a ello se recorre la matriz de forma vertical, horizontal y diagonal.
 Para las diagonales se realiza el recorrido de la siguiente manera:
 
+**Recorrido1:**
+
 ![](/Imagenes/Recorrido1.png)
 
 Se recorre de (izquierda a derecha) y de (abajo hacia arriba), teniendo como resultado:
 
 ![](/Imagenes/Resultante_Recorrido1.png)
+
+**Recorrido2:**
 
 ![](/Imagenes/Recorrido2.png)
 
