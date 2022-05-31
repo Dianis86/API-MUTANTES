@@ -8,10 +8,11 @@ using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
 using ReclutandoMutantes.Logica;
 using ReclutandoMutantes.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ReclutandoMutantes.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
     public class ADNController : Controller
     {
@@ -19,6 +20,7 @@ namespace ReclutandoMutantes.Controllers
 
         [HttpPost]
         [Route("/mutant")]
+        [AllowAnonymous]
         public IActionResult Mutante([FromBody] ADN cadena)
         {           
             string[] dna = cadena.dna;
@@ -77,6 +79,7 @@ namespace ReclutandoMutantes.Controllers
 
         [HttpGet]
         [Route("/stats")]
+        [AllowAnonymous]
         public IActionResult Estados()
         {       
             try
