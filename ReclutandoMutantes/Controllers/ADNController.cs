@@ -14,31 +14,50 @@ namespace ReclutandoMutantes.Controllers
 {
     [Route("api/")]
     [ApiController]
+    [Produces("application/json")]
     public class ADNController : Controller
     {
-        
-
+        /// <summary>
+        /// Verifica que la secuencia de ADN sea váldida,
+        /// si la secuencia ingresada es mutante o humano, y
+        /// guarda en la BD los registros de las secuencias
+        /// </summary>
+        /// <param name="dna"></param>
+        /// <returns>Devuelve codigo http y un mensaje</returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /mutant
+        ///     {
+        ///        "dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]
+        ///     }
+        ///
+        /// </remarks>
+        /// /// <response code="200">Devuelve como respuesta OK --> Es mutante</response>
+        /// <response code="403">Forbidden --> Devuelve como respuesta NO es mutante</response>
+        /// <response code="500">InternalServerError --> Si hay algún error creando o recorriendo la matriz</response>
+        /// <response code="400">BadRequest --> Tiene caracteres no permitidos ó no se proporcionó ningún dato</response>
         [HttpPost]
         [Route("/mutant")]
         [AllowAnonymous]
-        public IActionResult Mutante([FromBody] ADN cadena)
-        {           
-            string[] dna = cadena.dna;
+        public IActionResult Mutante([FromBody] ADN dna)
+        {
+            string[] secuencia = dna.dna;
             try
             {
                 string msg = "";
                 int statusCode = 0;
 
-                if (dna != null)
+                if (secuencia != null)
                 {
                     msg = string.Empty;
                     statusCode = 0;
 
                     //Valido que la cadena tenga caracteres permitidos
-                    if (Data.Validacion(dna))
+                    if (Data.Validacion(secuencia))
                     {
                         //Valido la secuencia de ADN para saber si es mutante
-                        if (Data.isMutant(dna))
+                        if (Data.isMutant(secuencia))
                         {
                             statusCode = StatusCodes.Status200OK;
                             msg = "Es mutante";  
@@ -76,7 +95,10 @@ namespace ReclutandoMutantes.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Método que comprueba la cantidad de adn mutantes y humanos para sacar un ratio
+        /// </summary>
+        /// <returns>Devuelve un Json con las estadíticas de las verificaciones</returns>
         [HttpGet]
         [Route("/stats")]
         [AllowAnonymous]

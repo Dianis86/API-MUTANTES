@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReclutandoMutantes</name>
+    </assembly>
+    <members>
+        <member name="M:ReclutandoMutantes.Controllers.ADNController.Mutante(ReclutandoMutantes.Models.ADN)">
+             <summary>
+             Verifica que la secuencia de ADN sea váldida,
+             verifica si la secuencia ingresada es mutante o humano,
+             guarda en la BD los registros de las secuencias
+             </summary>
+             <param name="dna"></param>
+             <returns>Devuelve codigo http y un mensaje</returns>
+             <remarks>
+             Sample request:
+            
+                 POST /mutant
+                 {
+                    "dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]
+                 }
+            
+             </remarks>
+             /// <response code="200">Devuelve como respuesta OK --> Es mutante</response>
+             <response code="403">Forbidden --> Devuelve como respuesta NO es mutante</response>
+             <response code="500">InternalServerError --> Si hay algún error creando o recorriendo la matriz</response>
+             <response code="400">BadRequest --> Tiene caracteres no permitidos ó no se proporcionó ningún dato</response>
+        </member>
+        <member name="M:ReclutandoMutantes.Controllers.ADNController.Estados">
+            <summary>
+            Método que comprueba la cantidad de adn mutantes y humanos para sacar un ratio
+            </summary>
+            <returns>Devuelve un Json con las estadíticas de las verificaciones</returns>
+        </member>
+    </members>
+</doc>
