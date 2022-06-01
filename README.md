@@ -37,16 +37,16 @@ Para las diagonales se realiza el recorrido de la siguiente manera:
 
 **Recorrido1:**
 
-![](/Imagenes/Recorrido1.png)     ![](/Imagenes/Resultante_Recorrido1.png)
-
 Se recorre de (izquierda a derecha) y de (abajo hacia arriba), teniendo como resultado:
+
+![](/Imagenes/Recorrido1.png)         ![](/Imagenes/Resultante_Recorrido1.png)
 
 
 **Recorrido2:**
 
-![](/Imagenes/Recorrido2.png)     ![](/Imagenes/Resultante_Recorrido2.png)
-
 Se recorre de (izquierda a derecha) y de (abajo hacia arriba), teniendo:
+
+![](/Imagenes/Recorrido2.png)         ![](/Imagenes/Resultante_Recorrido2.png)
 
 
 **Ejemplo de Secuencia**
