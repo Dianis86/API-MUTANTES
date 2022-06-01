@@ -32,7 +32,7 @@ namespace ReclutandoMutantes
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ReclutandoMutantes", Version = "v1" });
+                c.SwaggerDoc("ReclutandoMutantes", new OpenApiInfo { Title = "ReclutandoMutantes", Version = "v1" });
 
                 // using System.Reflection;
                 var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
