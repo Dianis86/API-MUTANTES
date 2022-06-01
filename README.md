@@ -27,7 +27,10 @@ Firebase - Módulo:  Realtime DataBase
 https://github.com/Dianis86/API-MUTANTES
 
 **URL del servicio: **
+
 https://reclutandomutantes.azurewebsites.net/stats
+
+https://reclutandomutantes.azurewebsites.net/mutant
 
 
 #### Descripción del Proyecto:
